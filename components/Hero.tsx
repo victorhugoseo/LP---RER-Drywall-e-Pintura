@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { ArrowRight, Star, CheckCircle, Clock } from 'lucide-react';
-import { COMPANY } from '../constants';
+import { COMPANY } from '../constants.tsx';
 
 const Hero: React.FC = () => {
   return (

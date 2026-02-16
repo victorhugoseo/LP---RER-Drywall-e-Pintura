@@ -17,7 +17,7 @@ import {
   Palette,
   Sparkles
 } from 'lucide-react';
-import { ServiceItem, Testimonial, FAQItem } from './types';
+import { ServiceItem, Testimonial, FAQItem } from './types.ts';
 
 export const COMPANY = {
   name: "RER Drywall e Pintura",

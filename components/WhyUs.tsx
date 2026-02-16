@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { COMPANY } from '../constants';
+import { COMPANY } from '../constants.tsx';
 import { Award, Clock, HardHat, ShieldCheck, CheckCircle2 } from 'lucide-react';
 
 const WhyUs: React.FC = () => {

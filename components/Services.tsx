@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { SERVICES, COMPANY } from '../constants';
+import { SERVICES, COMPANY } from '../constants.tsx';
 import { Check, ArrowRight, Layout, Layers, VolumeX, Box, Paintbrush, Sparkles } from 'lucide-react';
 
 const ServiceIcon = ({ id }: { id: string }) => {

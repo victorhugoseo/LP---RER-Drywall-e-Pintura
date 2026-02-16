@@ -1,6 +1,6 @@
 
 import React, { useState } from 'react';
-import { FAQS } from '../constants';
+import { FAQS } from '../constants.tsx';
 import { ChevronDown } from 'lucide-react';
 
 const FAQ: React.FC = () => {

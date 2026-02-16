@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { Phone } from 'lucide-react';
-import { COMPANY } from '../constants';
+import { COMPANY } from '../constants.tsx';
 
 const Header: React.FC = () => {
   return (
