@@ -1,16 +1,16 @@
 
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import WhyUs from './components/WhyUs';
-import Services from './components/Services';
-import Benefits from './components/Benefits';
-import Process from './components/Process';
-import Testimonials from './components/Testimonials';
-import FAQ from './components/FAQ';
-import Footer from './components/Footer';
-import WhatsAppButton from './components/WhatsAppButton';
-import { COMPANY } from './constants';
+import Header from './components/Header.tsx';
+import Hero from './components/Hero.tsx';
+import WhyUs from './components/WhyUs.tsx';
+import Services from './components/Services.tsx';
+import Benefits from './components/Benefits.tsx';
+import Process from './components/Process.tsx';
+import Testimonials from './components/Testimonials.tsx';
+import FAQ from './components/FAQ.tsx';
+import Footer from './components/Footer.tsx';
+import WhatsAppButton from './components/WhatsAppButton.tsx';
+import { COMPANY } from './constants.tsx';
 import { ArrowRight } from 'lucide-react';
 
 const App: React.FC = () => {

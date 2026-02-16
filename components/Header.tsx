@@ -1,14 +1,14 @@
 
 import React from 'react';
 import { Phone } from 'lucide-react';
-import { COMPANY } from '../constants';
+import { COMPANY } from '../constants.tsx';
 
 const Header: React.FC = () => {
   return (
     <header className="bg-white border-b border-gray-100 sticky top-0 z-40 shadow-sm">
       <div className="container mx-auto px-4 py-2 flex items-center justify-between">
         <div className="flex items-center">
-          {/* Logo Oficial - Espaço otimizado para a imagem com personagem vertical */}
+          {/* Logo Oficial - Mantendo o caminho logo.png conforme sua correção anterior */}
           <a href="/" className="relative flex items-center">
             <img 
               src="logo.png" 

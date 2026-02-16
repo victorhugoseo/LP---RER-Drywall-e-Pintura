@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { COMPANY, SERVICES } from '../constants';
+import { COMPANY, SERVICES } from '../constants.tsx';
 import { Instagram, Phone, MapPin, ExternalLink, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
