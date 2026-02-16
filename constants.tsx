@@ -1,18 +1,23 @@
 
 import React from 'react';
 import { 
-  Award, 
+  ShieldCheck, 
   Clock, 
   MessageCircle, 
+  Award, 
   MapPin, 
   Layers, 
   Paintbrush, 
   Layout, 
+  CheckCircle2, 
+  ArrowRight,
+  Zap,
   VolumeX,
   Box,
+  Palette,
   Sparkles
 } from 'lucide-react';
-import { ServiceItem, Testimonial, FAQItem } from './types.ts';
+import { ServiceItem, Testimonial, FAQItem } from './types';
 
 export const COMPANY = {
   name: "RER Drywall e Pintura",
@@ -25,6 +30,14 @@ export const COMPANY = {
   instagram: "@rerdrywal",
   instagramUrl: "https://instagram.com/rerdrywal"
 };
+
+export const DIFFERENTIATORS = [
+  { icon: <Award className="w-8 h-8 text-red-600" />, text: "Qualidade extrema no acabamento" },
+  { icon: <Clock className="w-8 h-8 text-red-600" />, text: "Cumprimento rigoroso de prazos" },
+  { icon: <MessageCircle className="w-8 h-8 text-red-600" />, text: "Atendimento direto via WhatsApp" },
+  { icon: <Layers className="w-8 h-8 text-red-600" />, text: "Especialização em projetos de Drywall" },
+  { icon: <MapPin className="w-8 h-8 text-red-600" />, text: "Atendimento em várias cidades do RJ" }
+];
 
 export const SERVICES: ServiceItem[] = [
   {

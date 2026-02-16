@@ -1,46 +1,49 @@
 
 import React from 'react';
 import { Phone } from 'lucide-react';
-import { COMPANY } from '../constants.tsx';
+import { COMPANY } from '../constants';
 
 const Header: React.FC = () => {
   return (
-    <header className="bg-white border-b border-gray-100 sticky top-0 z-40 shadow-sm">
-      <div className="container mx-auto px-4 py-2 flex items-center justify-between">
+    <header className="bg-white border-b border-gray-100 sticky top-0 z-40 shadow-md">
+      <div className="container mx-auto px-4 py-1 flex items-center justify-between">
         <div className="flex items-center">
-          {/* Logo Oficial - Mantendo o caminho logo.png conforme sua correção anterior */}
-          <a href="/" className="relative flex items-center">
+          {/* Logo Oficial - Substituindo totalmente o texto por imagem de alta visibilidade */}
+          <a href="/" className="relative flex items-center py-1">
             <img 
               src="logo.png" 
               alt="RER Drywall e Pinturas" 
-              className="h-24 md:h-32 lg:h-36 w-auto object-contain transition-all duration-300 hover:scale-105"
-              style={{ minWidth: '140px' }}
+              className="h-16 w-auto md:h-20 min-w-[64px] object-contain transition-all duration-300 hover:scale-105 filter drop-shadow-sm"
               loading="eager"
             />
+            {/* Fallback visual caso a imagem falhe (não fica tudo branco) */}
+            <noscript>
+               <span className="text-xl font-black text-blue-900 ml-2">RER DRYWALL</span>
+            </noscript>
           </a>
         </div>
 
-        <div className="hidden lg:flex items-center space-x-10">
-          <a href="#servicos" className="text-sm font-black text-blue-900 hover:text-red-600 transition-colors uppercase tracking-widest">Serviços</a>
-          <a href="#sobre" className="text-sm font-black text-blue-900 hover:text-red-600 transition-colors uppercase tracking-widest">Sobre Nós</a>
-          <a href="#faq" className="text-sm font-black text-blue-900 hover:text-red-600 transition-colors uppercase tracking-widest">Dúvidas</a>
+        <div className="hidden lg:flex items-center space-x-8">
+          <a href="#servicos" className="text-sm font-bold text-gray-600 hover:text-red-600 transition-colors uppercase tracking-wider">Serviços</a>
+          <a href="#sobre" className="text-sm font-bold text-gray-600 hover:text-red-600 transition-colors uppercase tracking-wider">Sobre Nós</a>
+          <a href="#faq" className="text-sm font-bold text-gray-600 hover:text-red-600 transition-colors uppercase tracking-wider">Dúvidas</a>
         </div>
 
-        <div className="flex items-center space-x-6">
+        <div className="flex items-center space-x-4">
           <a 
             href={COMPANY.whatsappUrl} 
             className="hidden sm:flex items-center text-sm font-black text-blue-900 hover:text-red-600 transition-colors"
           >
-            <Phone className="w-5 h-5 mr-2 text-red-600 animate-pulse" />
+            <Phone className="w-4 h-4 mr-2 text-red-600" />
             {COMPANY.whatsapp}
           </a>
           <a 
             href={COMPANY.whatsappUrl} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="bg-red-600 text-white px-8 py-4 rounded-full text-xs font-black shadow-[0_10px_20px_-5px_rgba(220,38,38,0.4)] hover:bg-red-700 transition-all active:scale-95 uppercase tracking-tighter"
+            className="bg-red-600 text-white px-6 py-3 rounded-full text-xs font-black shadow-lg shadow-red-200 hover:bg-red-700 transition-all active:scale-95 uppercase tracking-tighter"
           >
-            Orçamento Grátis
+            Fazer Orçamento
           </a>
         </div>
       </div>
