@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { MessageSquare } from 'lucide-react';
-import { COMPANY } from '../constants';
+import { COMPANY } from '../constants.tsx';
 
 const WhatsAppButton: React.FC = () => {
   return (

@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { ArrowRight, Star, CheckCircle, Clock } from 'lucide-react';
-import { COMPANY } from '../constants';
+import { COMPANY } from '../constants.tsx';
 
 const Hero: React.FC = () => {
   return (
@@ -65,7 +65,7 @@ const Hero: React.FC = () => {
               </div>
             </div>
 
-            {/* Botão Único - Texto Reduzido */}
+            {/* Botão Único */}
             <div className="animate-fade-up opacity-0 flex flex-col sm:flex-row items-center justify-center lg:justify-start" style={{animationDelay: '700ms'}}>
               <a 
                 href={COMPANY.whatsappUrl}
@@ -103,10 +103,7 @@ const Hero: React.FC = () => {
                 </div>
               </div>
             </div>
-            {/* Brilho decorativo */}
-            <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] h-[120%] bg-red-600/10 rounded-full blur-[120px] -z-10 animate-pulse"></div>
           </div>
-
         </div>
       </div>
     </section>
