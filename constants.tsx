@@ -32,7 +32,7 @@ export const COMPANY = {
 };
 
 export const IMAGES = {
-  heroMain: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200",
+  heroMain: "https://rerdpintura.com.br/wp-content/uploads/2026/02/rer-drywall-pintura-hero.png",
   heroBackground: "https://rerdpintura.com.br/wp-content/uploads/2026/01/forro-de-gesso.webp"
 };
 
