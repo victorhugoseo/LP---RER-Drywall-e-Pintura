@@ -25,10 +25,15 @@ export const COMPANY = {
   address: "Rua Curitiba 1030 – Realengo – RJ",
   cities: ["Rio de Janeiro", "Nova Iguaçu", "Niterói", "Duque de Caxias", "Queimados"],
   whatsapp: "(21) 99935-3977",
-  whatsappUrl: "https://wa.me/5521999353977",
+  whatsappUrl: "https://wa.me/5521999353977?text=Olá,%20RER%20Drywall!%20Encontrei%20o%20seu%20anúncio%20no%20Google%20e%20gostaria%20de%20realizar%20um%20orçamento.",
   hours: "08h às 18h",
   instagram: "@rerdrywal",
   instagramUrl: "https://instagram.com/rerdrywal"
+};
+
+export const IMAGES = {
+  heroMain: "https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&q=80&w=1200",
+  heroBackground: "https://rerdpintura.com.br/wp-content/uploads/2026/01/forro-de-gesso.webp"
 };
 
 export const DIFFERENTIATORS = [

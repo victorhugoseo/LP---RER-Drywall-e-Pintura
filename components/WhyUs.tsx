@@ -8,22 +8,22 @@ const WhyUs: React.FC = () => {
     {
       title: "Excelência Comprovada",
       desc: "Anos de experiência no mercado carioca com centenas de projetos entregues com perfeição técnica.",
-      icon: <Award className="w-10 h-10 text-red-600" />
+      icon: <Award className="w-10 h-10" />
     },
     {
       title: "Cronograma Rigoroso",
       desc: "Respeitamos seu tempo. Planejamento que garante a entrega na data combinada, sem surpresas.",
-      icon: <Clock className="w-10 h-10 text-red-600" />
+      icon: <Clock className="w-10 h-10" />
     },
     {
       title: "Mão de Obra Especializada",
       desc: "Equipe em treinamento constante para dominar as técnicas mais modernas e seguras de drywall.",
-      icon: <HardHat className="w-10 h-10 text-red-600" />
+      icon: <HardHat className="w-10 h-10" />
     },
     {
       title: "Materiais de 1ª Linha",
       desc: "Utilizamos apenas placas e perfis certificados pelas normas ABNT para máxima durabilidade.",
-      icon: <ShieldCheck className="w-10 h-10 text-red-600" />
+      icon: <ShieldCheck className="w-10 h-10" />
     }
   ];
 
@@ -54,7 +54,7 @@ const WhyUs: React.FC = () => {
               className={`reveal delay-${index * 100} bg-white p-8 rounded-[2.5rem] border border-gray-100 shadow-xl hover:shadow-2xl hover:border-red-100 transition-all duration-500 group flex flex-col items-center text-center hover:-translate-y-3`}
             >
               <div className="bg-blue-50 w-20 h-20 rounded-3xl shadow-inner flex items-center justify-center mb-8 group-hover:bg-red-600 transition-colors duration-500 group-hover:rotate-6">
-                <div className="group-hover:text-white transition-colors duration-500">
+                <div className="text-red-600 group-hover:text-white transition-colors duration-500">
                   {point.icon}
                 </div>
               </div>

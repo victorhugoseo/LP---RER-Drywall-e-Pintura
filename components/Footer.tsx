@@ -1,7 +1,7 @@
 
 import React from 'react';
 import { COMPANY, SERVICES } from '../constants.tsx';
-import { Instagram, Phone, MapPin, ExternalLink, Mail } from 'lucide-react';
+import { Instagram, Phone, MapPin, ExternalLink } from 'lucide-react';
 
 const Footer: React.FC = () => {
   const googleMapsUrl = "https://maps.app.goo.gl/YCk8o7exeAY76TWq6";
@@ -10,57 +10,57 @@ const Footer: React.FC = () => {
     <footer className="bg-blue-950 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Brand Column - Somente a Logo com alta visibilidade */}
-          <div className="flex flex-col items-start">
-            <div className="mb-8 bg-white/5 p-4 rounded-2xl border border-white/10 shadow-inner inline-block">
+          {/* Brand Column - Centralizado no Mobile */}
+          <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
+            <div className="mb-8 bg-white p-4 rounded-2xl border border-white/10 shadow-lg inline-block transition-transform hover:scale-105">
               <img 
-                src="logo.png" 
+                src="https://rerdpintura.com.br/wp-content/uploads/2026/01/logo-rer-drywall-e-pintura-1-e1768917919900.png" 
                 alt="RER Drywall e Pinturas Logo" 
-                className="w-48 h-auto object-contain brightness-110 drop-shadow-[0_10px_10px_rgba(0,0,0,0.3)]"
+                className="w-40 h-auto object-contain"
                 loading="lazy"
               />
             </div>
-            <p className="text-blue-200 mb-6 text-sm leading-relaxed font-medium max-w-xs">
+            <p className="text-blue-200 mb-6 text-sm leading-relaxed font-medium max-w-xs mx-auto lg:mx-0">
               Sua referência em serviços de acabamento no Rio de Janeiro. Transformamos sonhos em ambientes reais com profissionalismo e qualidade superior.
             </p>
-            <div className="flex space-x-4">
-              <a href={COMPANY.instagramUrl} target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-red-600 p-2.5 rounded-xl transition-all hover:-translate-y-1">
+            <div className="flex space-x-4 mb-8 lg:mb-0">
+              <a href={COMPANY.instagramUrl} target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-red-600 p-2.5 rounded-xl transition-all hover:-translate-y-1" aria-label="Instagram">
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href={COMPANY.whatsappUrl} target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-green-600 p-2.5 rounded-xl transition-all hover:-translate-y-1">
+              <a href={COMPANY.whatsappUrl} target="_blank" rel="noopener noreferrer" className="bg-white/10 hover:bg-green-600 p-2.5 rounded-xl transition-all hover:-translate-y-1" aria-label="WhatsApp">
                 <Phone className="w-5 h-5" />
               </a>
             </div>
           </div>
 
           {/* Quick Links */}
-          <div>
-            <h4 className="text-lg font-black mb-6 border-l-4 border-red-600 pl-3 uppercase tracking-wider">Serviços</h4>
+          <div className="text-center lg:text-left">
+            <h4 className="text-lg font-black mb-6 border-l-0 lg:border-l-4 border-red-600 pl-0 lg:pl-3 uppercase tracking-wider">Serviços</h4>
             <ul className="space-y-3 text-blue-200 text-sm font-bold">
               {SERVICES.map(s => (
                 <li key={s.id}>
-                  <a href={COMPANY.whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors flex items-center gap-1">
+                  <a href={COMPANY.whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors inline-flex items-center gap-1">
                     {s.title}
                   </a>
                 </li>
               ))}
               <li>
-                <a href={COMPANY.whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors font-bold text-red-400">
-                  + Rebaixamento de Teto
+                <a href={COMPANY.whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors inline-flex items-center gap-1">
+                  Rebaixamento de Teto
                 </a>
               </li>
               <li>
-                <a href={COMPANY.whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors font-bold text-red-400">
-                  + Efeito Marmorato
+                <a href={COMPANY.whatsappUrl} target="_blank" rel="noopener noreferrer" className="hover:text-red-500 transition-colors inline-flex items-center gap-1">
+                  Efeito Marmorato
                 </a>
               </li>
             </ul>
           </div>
 
           {/* Contact Info */}
-          <div>
-            <h4 className="text-lg font-black mb-6 border-l-4 border-red-600 pl-3 uppercase tracking-wider">Contato</h4>
-            <ul className="space-y-4 text-blue-200 text-sm font-bold">
+          <div className="text-center lg:text-left">
+            <h4 className="text-lg font-black mb-6 border-l-0 lg:border-l-4 border-red-600 pl-0 lg:pl-3 uppercase tracking-wider">Contato</h4>
+            <ul className="space-y-4 text-blue-200 text-sm font-bold flex flex-col items-center lg:items-start">
               <li className="flex items-start">
                 <MapPin className="w-5 h-5 mr-3 text-red-600 shrink-0" />
                 <a href={googleMapsUrl} target="_blank" rel="noopener noreferrer" className="hover:text-white transition-colors">
@@ -73,17 +73,13 @@ const Footer: React.FC = () => {
                   {COMPANY.whatsapp}
                 </a>
               </li>
-              <li className="flex items-center">
-                <Mail className="w-5 h-5 mr-3 text-red-600 shrink-0" />
-                <span>atendimento@rerdrywall.com.br</span>
-              </li>
             </ul>
           </div>
 
           {/* Locations */}
-          <div>
-            <h4 className="text-lg font-black mb-6 border-l-4 border-red-600 pl-3 uppercase tracking-wider">Atendimento</h4>
-            <div className="flex flex-wrap gap-2">
+          <div className="text-center lg:text-left flex flex-col items-center lg:items-start">
+            <h4 className="text-lg font-black mb-6 border-l-0 lg:border-l-4 border-red-600 pl-0 lg:pl-3 uppercase tracking-wider">Atendimento</h4>
+            <div className="flex flex-wrap justify-center lg:justify-start gap-2">
               {COMPANY.cities.map((city, i) => (
                 <span key={i} className="bg-white/5 border border-white/10 px-3 py-1 rounded-lg text-[10px] font-black text-blue-100 uppercase tracking-widest">
                   {city}

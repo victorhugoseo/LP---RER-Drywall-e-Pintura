@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header.tsx';
 import Hero from './components/Hero.tsx';
 import WhyUs from './components/WhyUs.tsx';
@@ -10,16 +10,28 @@ import Testimonials from './components/Testimonials.tsx';
 import FAQ from './components/FAQ.tsx';
 import Footer from './components/Footer.tsx';
 import WhatsAppButton from './components/WhatsAppButton.tsx';
-import { COMPANY } from './constants.tsx';
+import AdminTools from './components/AdminTools.tsx';
+import { COMPANY, IMAGES } from './constants.tsx';
 import { ArrowRight } from 'lucide-react';
 
 const App: React.FC = () => {
+  // Estado para a imagem da hero, inicializando do localStorage se existir
+  const [heroImage, setHeroImage] = useState<string>(() => {
+    const saved = localStorage.getItem('rer_custom_hero');
+    return saved || IMAGES.heroMain;
+  });
+
+  const handleImageChange = (newUrl: string) => {
+    setHeroImage(newUrl);
+    localStorage.setItem('rer_custom_hero', newUrl);
+  };
+
   return (
     <div className="min-h-screen bg-white selection:bg-red-100 selection:text-red-900">
       <Header />
       
       <main>
-        <Hero />
+        <Hero heroImage={heroImage} />
         
         <WhyUs />
         
@@ -68,6 +80,7 @@ const App: React.FC = () => {
       
       {/* Floating Buttons */}
       <WhatsAppButton />
+      <AdminTools currentImage={heroImage} onImageChange={handleImageChange} />
     </div>
   );
 };

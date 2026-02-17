@@ -8,15 +8,15 @@ const Header: React.FC = () => {
     <header className="bg-white border-b border-gray-100 sticky top-0 z-40 shadow-md">
       <div className="container mx-auto px-4 py-1 flex items-center justify-between">
         <div className="flex items-center">
-          {/* Logo Oficial - Substituindo totalmente o texto por imagem de alta visibilidade */}
+          {/* Logo Oficial atualizada com o novo link fornecido */}
           <a href="/" className="relative flex items-center py-1">
             <img 
-              src="logo.png" 
+              src="https://rerdpintura.com.br/wp-content/uploads/2026/01/logo-rer-drywall-e-pintura-1-e1768917919900.png" 
               alt="RER Drywall e Pinturas" 
-              className="h-16 w-auto md:h-20 min-w-[64px] object-contain transition-all duration-300 hover:scale-105 filter drop-shadow-sm"
+              className="h-14 w-auto md:h-16 min-w-[64px] object-contain transition-all duration-300 hover:scale-105"
               loading="eager"
             />
-            {/* Fallback visual caso a imagem falhe (não fica tudo branco) */}
+            {/* Fallback visual */}
             <noscript>
                <span className="text-xl font-black text-blue-900 ml-2">RER DRYWALL</span>
             </noscript>
