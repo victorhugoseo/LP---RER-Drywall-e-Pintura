@@ -11,7 +11,7 @@ const Process: React.FC = () => {
   ];
 
   return (
-    <section className="py-12 bg-white border-y border-gray-100 overflow-hidden">
+    <section id="processo" className="py-12 bg-white border-y border-gray-100 overflow-hidden">
       <div className="container mx-auto px-4 text-center">
         <h2 className="text-3xl md:text-4xl font-extrabold text-blue-900 mb-10 reveal">Como funciona o nosso processo</h2>
         

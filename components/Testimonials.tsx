@@ -5,7 +5,7 @@ import { Star } from 'lucide-react';
 
 const Testimonials: React.FC = () => {
   return (
-    <section className="py-16 bg-gray-50 overflow-hidden">
+    <section id="depoimentos" className="py-16 bg-gray-50 overflow-hidden">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           {/* Badge de Destaque Google */}

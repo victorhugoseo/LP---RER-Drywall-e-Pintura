@@ -25,6 +25,8 @@ const Header: React.FC = () => {
 
         <div className="hidden lg:flex items-center space-x-8">
           <a href="#servicos" className="text-sm font-bold text-gray-600 hover:text-red-600 transition-colors uppercase tracking-wider">Serviços</a>
+          <a href="#processo" className="text-sm font-bold text-gray-600 hover:text-red-600 transition-colors uppercase tracking-wider">Como Contratar</a>
+          <a href="#depoimentos" className="text-sm font-bold text-gray-600 hover:text-red-600 transition-colors uppercase tracking-wider">Depoimentos</a>
           <a href="#sobre" className="text-sm font-bold text-gray-600 hover:text-red-600 transition-colors uppercase tracking-wider">Sobre Nós</a>
           <a href="#faq" className="text-sm font-bold text-gray-600 hover:text-red-600 transition-colors uppercase tracking-wider">Dúvidas</a>
         </div>
