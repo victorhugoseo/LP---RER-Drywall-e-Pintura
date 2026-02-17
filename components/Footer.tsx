@@ -10,7 +10,7 @@ const Footer: React.FC = () => {
     <footer className="bg-blue-950 text-white pt-16 pb-8">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-          {/* Brand Column - Centralizado no Mobile */}
+          {/* Brand Column */}
           <div className="flex flex-col items-center lg:items-start text-center lg:text-left">
             <div className="mb-8 bg-white p-4 rounded-2xl border border-white/10 shadow-lg inline-block transition-transform hover:scale-105">
               <img 
@@ -101,8 +101,11 @@ const Footer: React.FC = () => {
           <p className="text-blue-400 text-[10px] font-bold mb-2 uppercase tracking-widest">
             CNPJ: {COMPANY.cnpj} | {COMPANY.hours}
           </p>
-          <p className="text-blue-500 text-[10px] font-black tracking-[0.3em] uppercase">
+          <p className="text-blue-500 text-[10px] font-black tracking-[0.3em] uppercase mb-1">
             &copy; {new Date().getFullYear()} RER DRYWALL & PINTURAS. Todos os direitos reservados.
+          </p>
+          <p className="text-blue-500 text-[9px] font-bold uppercase tracking-widest">
+            Desenvolvido por Victor Hugo <a href="https://victorhugoseo.com.br/" target="_blank" rel="noopener noreferrer" className="text-red-500 hover:underline">Consultor SEO</a>
           </p>
         </div>
       </div>

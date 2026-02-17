@@ -12,14 +12,13 @@ const Hero: React.FC<HeroProps> = ({ heroImage }) => {
 
   return (
     <section className="relative min-h-[85vh] flex items-center pt-20 pb-20 lg:pt-28 lg:pb-32 overflow-hidden bg-slate-950">
-      {/* Background Image com Opacidade Ajustada para maior visibilidade */}
+      {/* Background Image com Opacidade Ajustada */}
       <div className="absolute inset-0 z-0">
         <img 
           src={IMAGES.heroBackground} 
           alt="Background Drywall" 
           className="w-full h-full object-cover opacity-50 transition-transform duration-[10s] hover:scale-110"
         />
-        {/* Gradiente suavizado de 90% para 70% de opacidade no meio para clarear o fundo */}
         <div className="absolute inset-0 bg-gradient-to-r from-slate-950 via-slate-950/70 to-transparent"></div>
       </div>
 
@@ -68,7 +67,7 @@ const Hero: React.FC<HeroProps> = ({ heroImage }) => {
               </div>
             </div>
 
-            <div className="animate-fade-up opacity-0 flex flex-col sm:flex-row items-center justify-center lg:justify-start" style={{animationDelay: '700ms'}}>
+            <div className="animate-fade-up opacity-0 flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4" style={{animationDelay: '700ms'}}>
               <a 
                 href={COMPANY.whatsappUrl}
                 target="_blank"
@@ -78,17 +77,25 @@ const Hero: React.FC<HeroProps> = ({ heroImage }) => {
                 SOLICITAR ORÇAMENTO AGORA
                 <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform" />
               </a>
+              
+              <a 
+                href="#servicos"
+                className="group w-full sm:w-auto bg-white/10 backdrop-blur-md text-white border border-white/20 px-8 py-4 rounded-2xl text-base font-black hover:bg-white/20 transition-all flex items-center justify-center hover:scale-105 active:scale-95"
+              >
+                VER SERVIÇOS
+                <ArrowRight className="ml-3 w-5 h-5 group-hover:translate-x-2 transition-transform text-red-500" />
+              </a>
             </div>
           </div>
 
-          {/* Lado Direito: Imagem Principal Dinâmica */}
+          {/* Lado Direito: Imagem Principal */}
           <div className="w-full lg:w-1/2 relative animate-fade-up opacity-0" style={{animationDelay: '400ms'}}>
             <div className="relative z-10 rounded-[3rem] overflow-hidden shadow-[0_0_80px_-20px_rgba(220,38,38,0.3)] border-[8px] border-white/5 group bg-slate-900">
               <img 
                 src={finalImage} 
                 alt="Obra de Drywall RER" 
                 className="w-full h-[550px] object-cover transition-transform duration-700 group-hover:scale-110"
-                key={finalImage} // Força re-render quando a imagem muda
+                key={finalImage}
               />
               
               <div className="absolute bottom-8 left-8 right-8 bg-slate-900/90 backdrop-blur-xl p-6 rounded-3xl shadow-2xl flex items-center gap-5 border border-white/10 transform transition-transform duration-500 hover:-translate-y-2 text-left">

@@ -61,9 +61,14 @@ const WhatsAppButton: React.FC = () => {
         href={COMPANY.whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        className="pointer-events-auto bg-[#25D366] text-white p-3.5 sm:p-4 rounded-full shadow-[0_15px_35px_-10px_rgba(37,211,102,0.6)] hover:bg-[#128C7E] transition-all duration-300 hover:scale-110 flex items-center justify-center animate-bounce border-4 border-white shrink-0"
+        className="relative pointer-events-auto bg-[#25D366] text-white p-3.5 sm:p-4 rounded-full shadow-[0_15px_35px_-10px_rgba(37,211,102,0.6)] hover:bg-[#128C7E] transition-all duration-300 hover:scale-110 flex items-center justify-center animate-bounce border-4 border-white shrink-0"
         aria-label="Fale conosco no WhatsApp"
       >
+        {/* Badge de Mensagem Não Lida */}
+        <div className="absolute -top-1 -right-1 bg-red-600 text-white w-5 h-5 sm:w-6 sm:h-6 rounded-full flex items-center justify-center text-[10px] sm:text-xs font-black border-2 border-white shadow-lg z-10">
+          1
+        </div>
+
         {/* Logo Oficial do WhatsApp via SVG */}
         <svg 
           viewBox="0 0 24 24" 
